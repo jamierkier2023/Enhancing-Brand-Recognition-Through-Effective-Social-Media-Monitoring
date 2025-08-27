@@ -7,8 +7,7 @@ Analysis of how 1 company leverages it's social media marketing tools to manage 
 - [Introduction](#introduction)  
 - [Business Problem](#business-problem)  
 - [Data Sources](#data-sources)  
-- [Key Metrics and Visualizations](#key-metrics-and-visualizations)     
-- [Demo Dashboard SQL Report](#demo-dashboard-sql-report)  
+- [Key Metrics and Visualizations](#key-metrics-and-visualizations)       
 - [Insights & Recommendations](#insights--recommendations)  
 - [Conclusion](#conclusion)  
 
@@ -63,7 +62,6 @@ WHERE CrisisEventTime IS NOT NULL AND FirstResponseTime IS NOT NULL;
 SELECT AVG(InfluencerScore) AS AverageInfluenceScore
 FROM SocialMedia;
 ```
-
 ---
 
 ### Brand vs Competitor Mentions  
