@@ -51,7 +51,6 @@ WHERE CrisisEventTime IS NOT NULL AND FirstResponseTime IS NOT NULL;
 ---
 
 ### Average Influence Score  
-<img width="1000" height="500" alt="Average_Influence_Score" src="https://github.com/user-attachments/assets/1a71fc41-3e28-4ac2-8d4d-57485ba5ffc4" />
   
 - **Result:** 3,086 average followers per brand-related post.  
 - **Implication:** AfriTech has **strong reach potential**, but must focus on converting reach into positive advocacy.  
@@ -63,7 +62,6 @@ FROM SocialMedia;
 ---
 
 ### Brand vs Competitor Mentions  
-<img width="1979" height="1180" alt="Brand_vs_Competitor_Mentions" src="https://github.com/user-attachments/assets/4cb55bd4-4900-4698-83b6-40ce4b732371" />
  
 - **Result:** AfriTech leads in mentions (2,487), followed by Competitor A (2,163).  
 - **Implication:** High visibility but **brand narrative control is at risk** — mentions can skew negative.  
