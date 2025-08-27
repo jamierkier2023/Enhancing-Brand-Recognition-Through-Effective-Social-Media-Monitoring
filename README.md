@@ -49,7 +49,6 @@ FROM SocialMedia
 WHERE CrisisEventTime IS NOT NULL AND FirstResponseTime IS NOT NULL;
 ```
 ---
-
 ### Average Influence Score  
   
 - **Result:** 3,086 average followers per brand-related post.  
