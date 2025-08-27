@@ -7,8 +7,7 @@ Analysis of how 1 company leverages it's social media marketing tools to manage 
 - [Introduction](#introduction)  
 - [Business Problem](#business-problem)  
 - [Data Sources](#data-sources)  
-- [Key Metrics and Visualizations](#key-metrics-and-visualizations)   
-- [SQL Code Samples](#sql-code-samples)  
+- [Key Metrics and Visualizations](#key-metrics-and-visualizations)     
 - [Demo Dashboard SQL Report](#demo-dashboard-sql-report)  
 - [Insights & Recommendations](#insights--recommendations)  
 - [Conclusion](#conclusion)  
@@ -43,7 +42,6 @@ Data was ingested into **PostgreSQL** from transaction logs, customer records, a
 
 ### Average Crisis Response Time  
 <img width="1000" height="500" alt="Average_Crisis_Response_Time_(Hours) (1)" src="https://github.com/user-attachments/assets/d41ef5a5-58f7-4cc8-bbb5-05d3ee9c1e37" />
-  
 - **Result:** 9.34 hours on average to respond to crises.  
 - **Implication:** The company is slower than the ideal **< 6 hours** benchmark, risking escalation.  
 
@@ -53,7 +51,6 @@ SELECT AVG(DATE_PART('epoch', (CAST(FirstResponseTime AS TIMESTAMP)
 FROM SocialMedia
 WHERE CrisisEventTime IS NOT NULL AND FirstResponseTime IS NOT NULL;
 ```
-
 ---
 
 ### Average Influence Score  
@@ -81,7 +78,6 @@ SELECT
   SUM(CASE WHEN CompetitorMention = TRUE THEN 1 ELSE 0 END) AS CompetitorMentions
 FROM SocialMedia;
 ```
-
 ---
 
 ### Content Effectiveness  
@@ -95,7 +91,6 @@ SELECT PostType, AVG(EngagementLikes + EngagementShares + EngagementComments) AS
 FROM SocialMedia
 GROUP BY PostType;
 ```
-
 ---
 
 ### Engagement Rate  
@@ -109,7 +104,6 @@ SELECT AVG((EngagementLikes + EngagementShares + EngagementComments) /
             NULLIF(UserFollowers, 0)) AS EngagementRate
 FROM SocialMedia;
 ```
-
 ---
 
 ### Resolution Rate  
@@ -125,7 +119,6 @@ SELECT COUNT(*) * 100.0 / (SELECT COUNT(*)
 FROM SocialMedia
 WHERE ResolutionStatus = TRUE;
 ```
-
 ---
 
 ### Sentiment Analysis  
@@ -145,8 +138,7 @@ FROM SocialMedia
 GROUP BY Sentiment;
 ```
 ## SQL Code Samples  
-The project relied heavily on **PostgreSQL queries** for analysis, data transformation, and visualization preparation. Full SQL queries for ETL, validation, and advanced analytics are available in the [`Brand Reputation.sql`](Brand_Reputation.sql) file.  
-
+The project relied heavily on **PostgreSQL queries** for analysis, data transformation, and visualization preparation.   
 ---
 
 ## Insights & Recommendations  
