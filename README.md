@@ -7,14 +7,7 @@ Analysis of how 1 company leverages it's social media marketing tools to manage 
 - [Introduction](#introduction)  
 - [Business Problem](#business-problem)  
 - [Data Sources](#data-sources)  
-- [Key Metrics and Visualizations](#key-metrics-and-visualizations)  
-  - [Average Crisis Response Time](#average-crisis-response-time)  
-  - [Average Influence Score](#average-influence-score)  
-  - [Brand vs Competitor Mentions](#brand-vs-competitor-mentions)  
-  - [Content Effectiveness](#content-effectiveness)  
-  - [Engagement Rate](#engagement-rate)  
-  - [Resolution Rate](#resolution-rate)  
-  - [Sentiment Analysis](#sentiment-analysis)  
+- [Key Metrics and Visualizations](#key-metrics-and-visualizations)   
 - [SQL Code Samples](#sql-code-samples)  
 - [Demo Dashboard SQL Report](#demo-dashboard-sql-report)  
 - [Insights & Recommendations](#insights--recommendations)  
@@ -136,8 +129,10 @@ WHERE ResolutionStatus = TRUE;
 ---
 
 ### Sentiment Analysis  
-![Sentiment Distribution](Sentiment_Distribution.png)  
-![Sentiment Percentage](Sentiment_Percentage.png)  
+<img width="1979" height="1180" alt="Sentiment_Distribution" src="https://github.com/user-attachments/assets/d654ba16-d4e1-467b-9436-b1bf737f5b5a" />
+  
+<img width="1979" height="1180" alt="Sentiment_Percentage" src="https://github.com/user-attachments/assets/09a17e7e-a1b9-44a3-a7ca-f9455cd4064a" />
+  
 - **Result:**  
   - 55.6% Positive  
   - 24.6% Neutral  
@@ -149,43 +144,8 @@ SELECT Sentiment, COUNT(*) * 100.0 / (SELECT COUNT(*) FROM SocialMedia) AS Perce
 FROM SocialMedia
 GROUP BY Sentiment;
 ```
-
----
-
 ## SQL Code Samples  
 The project relied heavily on **PostgreSQL queries** for analysis, data transformation, and visualization preparation. Full SQL queries for ETL, validation, and advanced analytics are available in the [`Brand Reputation.sql`](Brand_Reputation.sql) file.  
-
----
-
-## Demo Dashboard SQL Report  
-
-To generate all KPIs in a single view for executives:  
-
-```sql
-WITH Metrics AS (
-    SELECT 
-        AVG((EngagementLikes + EngagementShares + EngagementComments) / NULLIF(UserFollowers, 0)) AS EngagementRate,
-        AVG(InfluencerScore) AS AvgInfluenceScore,
-        AVG(DATE_PART('epoch', (FirstResponseTime - CrisisEventTime)) / 3600) AS AvgCrisisResponseTime,
-        COUNT(*) * 100.0 / (SELECT COUNT(*) FROM SocialMedia WHERE CrisisEventTime IS NOT NULL) AS ResolutionRate
-    FROM SocialMedia
-    WHERE UserFollowers IS NOT NULL
-),
-SentimentData AS (
-    SELECT Sentiment, COUNT(*) * 100.0 / (SELECT COUNT(*) FROM SocialMedia) AS SentimentPct
-    FROM SocialMedia
-    GROUP BY Sentiment
-),
-BrandVsCompetitors AS (
-    SELECT 
-        SUM(CASE WHEN BrandMention = TRUE THEN 1 ELSE 0 END) AS BrandMentions,
-        SUM(CASE WHEN CompetitorMention = TRUE THEN 1 ELSE 0 END) AS CompetitorMentions
-    FROM SocialMedia
-)
-SELECT * FROM Metrics, BrandVsCompetitors;
-
-SELECT * FROM SentimentData;
-```
 
 ---
 
