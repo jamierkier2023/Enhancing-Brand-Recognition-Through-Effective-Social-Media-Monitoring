@@ -99,7 +99,6 @@ FROM SocialMedia;
 ---
 
 ### Resolution Rate  
-<img width="1000" height="500" alt="Resolution_Rate" src="https://github.com/user-attachments/assets/a2e35e30-a3e2-4aed-8a9b-f19ec0b613a3" />
   
 - **Result:** 95.24% of crises resolved.  
 - **Implication:** AfriTech’s crisis **completion rate is strong**, but improvements in **response speed** are required.  
