@@ -87,7 +87,6 @@ GROUP BY PostType;
 ---
 
 ### Engagement Rate  
-<img width="1000" height="500" alt="Engagement_Rate" src="https://github.com/user-attachments/assets/61136a79-b538-463a-9ecf-877e4e667733" />
  
 - **Result:** 3.78% average engagement rate per post.  
 - **Implication:** Slightly above the **industry benchmark (~3%)**, suggesting active but not maximized community engagement.  
