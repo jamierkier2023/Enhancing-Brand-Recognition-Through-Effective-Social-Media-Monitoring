@@ -34,12 +34,11 @@ Data was ingested into **PostgreSQL** from transaction logs, customer records, a
 - **CustomerData** (demographics, segmentation)  
 - **Transactions** (sales, product recalls)  
 - **SocialMedia** (brand mentions, sentiment, engagement, influencer metrics, crisis events)  
-
 ---
-
 ## Key Metrics and Visualizations  
 
 ### Average Crisis Response Time  
+
 <img width="1000" height="500" alt="Average_Crisis_Response_Time_(Hours) (1)" src="https://github.com/user-attachments/assets/d41ef5a5-58f7-4cc8-bbb5-05d3ee9c1e37" />
 - **Result:** 9.34 hours on average to respond to crises.  
 - **Implication:** The company is slower than the ideal **< 6 hours** benchmark, risking escalation.  
