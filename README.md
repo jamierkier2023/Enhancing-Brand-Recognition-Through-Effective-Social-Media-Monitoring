@@ -49,7 +49,8 @@ Data was ingested into **PostgreSQL** from transaction logs, customer records, a
 ## Key Metrics and Visualizations  
 
 ### Average Crisis Response Time  
-![Average Crisis Response Time](Average_Crisis_Response_Time_(Hours).png)  
+<img width="1000" height="500" alt="Average_Crisis_Response_Time_(Hours) (1)" src="https://github.com/user-attachments/assets/d41ef5a5-58f7-4cc8-bbb5-05d3ee9c1e37" />
+  
 - **Result:** 9.34 hours on average to respond to crises.  
 - **Implication:** The company is slower than the ideal **< 6 hours** benchmark, risking escalation.  
 
@@ -63,7 +64,8 @@ WHERE CrisisEventTime IS NOT NULL AND FirstResponseTime IS NOT NULL;
 ---
 
 ### Average Influence Score  
-![Average Influence Score](Average_Influence_Score.png)  
+<img width="1000" height="500" alt="Average_Influence_Score" src="https://github.com/user-attachments/assets/1a71fc41-3e28-4ac2-8d4d-57485ba5ffc4" />
+  
 - **Result:** 3,086 average followers per brand-related post.  
 - **Implication:** AfriTech has **strong reach potential**, but must focus on converting reach into positive advocacy.  
 
@@ -75,7 +77,8 @@ FROM SocialMedia;
 ---
 
 ### Brand vs Competitor Mentions  
-![Brand vs Competitor Mentions](Brand_vs_Competitor_Mentions.png)  
+<img width="1979" height="1180" alt="Brand_vs_Competitor_Mentions" src="https://github.com/user-attachments/assets/4cb55bd4-4900-4698-83b6-40ce4b732371" />
+ 
 - **Result:** AfriTech leads in mentions (2,487), followed by Competitor A (2,163).  
 - **Implication:** High visibility but **brand narrative control is at risk** — mentions can skew negative.  
 
@@ -89,7 +92,8 @@ FROM SocialMedia;
 ---
 
 ### Content Effectiveness  
-![Content Effectiveness](Content_Effectiveness_by_PostType.png)  
+<img width="1979" height="1180" alt="Content_Effectiveness_by_PostType" src="https://github.com/user-attachments/assets/31087991-28cd-4cb7-aee5-df187786860a" />
+  
 - **Result:** Text posts had the highest engagement (74 avg likes+shares), followed by video and image.  
 - **Implication:** **Content strategy should prioritize text posts** (e.g., product announcements, direct customer updates).  
 
@@ -102,7 +106,8 @@ GROUP BY PostType;
 ---
 
 ### Engagement Rate  
-![Engagement Rate](Engagement_Rate.png)  
+<img width="1000" height="500" alt="Engagement_Rate" src="https://github.com/user-attachments/assets/61136a79-b538-463a-9ecf-877e4e667733" />
+ 
 - **Result:** 3.78% average engagement rate per post.  
 - **Implication:** Slightly above the **industry benchmark (~3%)**, suggesting active but not maximized community engagement.  
 
@@ -115,7 +120,8 @@ FROM SocialMedia;
 ---
 
 ### Resolution Rate  
-![Resolution Rate](Resolution_Rate.png)  
+<img width="1000" height="500" alt="Resolution_Rate" src="https://github.com/user-attachments/assets/a2e35e30-a3e2-4aed-8a9b-f19ec0b613a3" />
+  
 - **Result:** 95.24% of crises resolved.  
 - **Implication:** AfriTech’s crisis **completion rate is strong**, but improvements in **response speed** are required.  
 
